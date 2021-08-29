@@ -1,0 +1,19 @@
+{
+    "identifier": "dev.basegrey.elixir-format",
+    "name": "Elixir Format",
+    "organization": "Base Grey",
+    "description": "Format file on save with mix format",
+    "bugs": "https://github.com/christopherlai/nova-elixir-format/issues",
+    "homepage": "https://github.com/christopherlai/nova-elixir-format",
+    "repository": "https://github.com/christopherlai/nova-elixir-format",
+    "main": "main.js",
+    "version": "1.0",
+    "categories": ["formatters"],
+    "activationEvents": [
+        "onLanguage:elixir",
+        "onWorkspaceContains:mix.exs"
+    ],
+    "entitlements": {
+        "process": true
+    }
+}
