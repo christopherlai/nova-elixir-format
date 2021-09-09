@@ -17,8 +17,4 @@ const runFormat = (textEditor) => {
     })
   })
   .catch((error) =>{console.log(error);});
-
-  return textEditor.edit((textEditorEdit) => {
-
-  });
 }
