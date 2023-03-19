@@ -13,19 +13,21 @@ exports.run = (unformattedContent) => {
     const writer = stdin.getWriter();
 
     writer.ready.then(() => {
-      return writer.write(unformattedContent);
-    }).then(writer.close());
+      writer.write(unformattedContent);
+    }).then(() => {
+      writer.close();
+    });
 
-    process.onStdout(function(line) {
+    process.onStdout(function (line) {
       formattedContent += line;
     });
 
-    process.onStderr(function(line) {
+    process.onStderr(function (line) {
       error += line;
       console.log("Error with mix format: " + line);
     });
 
-    process.onDidExit(function(code) {
+    process.onDidExit(function (code) {
       if (code !== 0) {
         reject(error);
         return;
