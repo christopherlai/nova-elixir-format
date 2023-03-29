@@ -10,7 +10,7 @@ const runFormat = (textEditor) => {
   const range = new Range(0, contentLength);
   const unformattedContent = document.getTextInRange(range);
 
-  return format.run(unformattedContent)
+  return format.run(textEditor.document.path, unformattedContent)
   .then((formattedContent) => {
     return textEditor.edit((textEditorEdit) => {
       textEditorEdit.replace(range, formattedContent);

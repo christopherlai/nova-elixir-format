@@ -1,3 +1,7 @@
+## Version 1.0.4
+
+Pass the file path to `--stdin-filename`.
+
 ## Version 1.0.3
 
 Set `cwd` to `Workspace`. This should fix an issue with the formatter not picking up the `.formatter.exs` file.
