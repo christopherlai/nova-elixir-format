@@ -7,7 +7,7 @@
     "homepage": "https://github.com/christopherlai/nova-elixir-format",
     "repository": "https://github.com/christopherlai/nova-elixir-format",
     "main": "main.js",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "categories": ["formatters"],
     "activationEvents": [
         "onLanguage:elixir",

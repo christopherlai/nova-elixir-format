@@ -1,7 +1,11 @@
 exports.run = (unformattedContent) => {
-  const options = {
+  let options = {
     args: ['mix', 'format', '-'],
     stdio: 'pipe',
+  }
+
+  if (nova.workspace.path != null) {
+      options.cwd = nova.workspace.path;
   }
 
   const process = new Process('/usr/bin/env', options);
