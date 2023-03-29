@@ -1,7 +1,12 @@
-exports.run = (unformattedContent) => {
+exports.run = (path, unformattedContent) => {
   let options = {
     args: ['mix', 'format', '-'],
     stdio: 'pipe',
+  }
+
+  if (path != null) {
+      options.args.splice(2, 0, '--stdin-filename');
+      options.args.splice(3, 0, path);
   }
 
   if (nova.workspace.path != null) {
